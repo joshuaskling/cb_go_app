@@ -24,3 +24,8 @@ jobs:
           go test -v ./...
       - name: Scan with SonarQube bundled action
         uses: https://github.com/cloudbees-io/sonarqube-bundled-sast-scan-code@v1
+      - name: UI Scan Step
+        kind: scan
+        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
+        with:
+          language: GO
